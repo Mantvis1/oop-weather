@@ -75,7 +75,9 @@ class DbRepository implements DataProvider
                     $record->setText($item['text']);
                     $result[] = $record;
                 }
-            }
+            } else {
+            return null;
+        }
 
             return $result;
         }

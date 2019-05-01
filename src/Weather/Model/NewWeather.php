@@ -62,7 +62,7 @@ class NewWeather
     }
 
     /**
-     * @return mixed
+     * @return integer
      */
     public function getHigh()
     {
@@ -70,7 +70,7 @@ class NewWeather
     }
 
     /**
-     * @param mixed $high
+     * @param integer $high
      */
     public function setHigh($high): void
     {
@@ -78,7 +78,7 @@ class NewWeather
     }
 
     /**
-     * @return mixed
+     * @return integer
      */
     public function getLow()
     {
@@ -86,7 +86,7 @@ class NewWeather
     }
 
     /**
-     * @param mixed $low
+     * @param integer $low
      */
     public function setLow($low): void
     {
@@ -94,7 +94,7 @@ class NewWeather
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getText()
     {
