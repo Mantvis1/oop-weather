@@ -13,14 +13,14 @@ class Manager
      */
     private $transporter;
 
-    public function getTodayInfo(): Weather
+    public function getTodayInfo(string $dataType): object
     {
-        return $this->getTransporter()->selectByDate(new \DateTime());
+        return $this->getTransporter()->selectByDate($dataType, new \DateTime());
     }
 
-    public function getWeekInfo(): array
+    public function getWeekInfo(string $dataType): array
     {
-        return $this->getTransporter()->selectByRange(new \DateTime('midnight'), new \DateTime('+6 days midnight'));
+        return $this->getTransporter()->selectByRange($dataType, new \DateTime('midnight'), new \DateTime('+6 days midnight'));
     }
 
     private function getTransporter()
