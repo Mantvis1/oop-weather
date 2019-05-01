@@ -75,5 +75,54 @@
     "high": "31",
     "low": "20",
     "text": "Sunny"
+  },
+  {
+    "date": "1 May 2019",
+    "day": "Mon",
+    "high": "32",
+    "low": "15",
+    "text": " Cloudy"
+  },
+  {
+    "date": "2 May 2019",
+    "day": "Mon",
+    "high": "15",
+    "low": "10",
+    "text": " Sunny"
+  },
+  {
+    "date": "3 May 2019",
+    "day": "Mon",
+    "high": "23",
+    "low": "11",
+    "text": "Scattered Showers"
+  },
+  {
+    "date": "4 May 2019",
+    "day": "Mon",
+    "high": "24",
+    "low": "11",
+    "text": " Partly Cloudy"
+  },
+  {
+    "date": "5 May 2019",
+    "day": "Mon",
+    "high": "25",
+    "low": "14",
+    "text": " Sunny"
+  },
+  {
+    "date": "6 May 2019",
+    "day": "Mon",
+    "high": "39",
+    "low": "22",
+    "text": " Cloudy"
+  },
+  {
+    "date": "7 May 2019",
+    "day": "Mon",
+    "high": "47",
+    "low": "24",
+    "text": " Partly Cloudy"
   }
 ]

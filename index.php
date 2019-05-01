@@ -2,8 +2,8 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Weather\Controller\StartPage;
@@ -14,14 +14,14 @@ $loader = new FilesystemLoader('View', __DIR__ . '/src/Weather');
 $twig = new Environment($loader, ['cache' => __DIR__ . '/cache', 'debug' => true]);
 
 $controller = new StartPage();
-switch ($request->getRequestUri()) {
+switch ("/week") { //$request->getRequestUri()
     case '/week':
         $renderInfo = $controller->getWeekWeather();
         break;
     case '/':
     default:
         $renderInfo = $controller->getTodayWeather();
-    break;
+        break;
 }
 $renderInfo['context']['resources_dir'] = 'src/Weather/Resources';
 
