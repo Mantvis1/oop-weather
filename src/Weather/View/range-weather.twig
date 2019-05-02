@@ -11,7 +11,11 @@
                         <div class="row">
                     {% endif %}
                         <div class="col-lg-3">
-                            {{ include('weather-block.twig', {item: weather}) }}
+                            {% if weather.high != null %}
+                                {{ include('new-weather-block.twig', {item: weather}) }}
+                            {% else %}
+                                {{ include('weather-block.twig', {item: weather}) }}
+                            {% endif %}
                         </div>
                 {% endfor %}
                 </div>

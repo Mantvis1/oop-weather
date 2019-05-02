@@ -35,16 +35,12 @@ switch ($request->getRequestUri()) {
         break;
     case '/oop-weather/jsonWeek':
         $renderInfo = $controller->getWeekWeather("new");
-        var_dump($renderInfo);
         break;
     case '/oop-weather/jsonDay':
         $renderInfo = $controller->getTodayWeather("new");
-        //var_dump($renderInfo);
         break;
     default:
-        var_dump($request->getRequestUri());
         $renderInfo = $controller->getTodayWeather("old");
-        //var_dump($renderInfo);
         break;
 
 }
