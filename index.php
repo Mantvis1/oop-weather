@@ -13,17 +13,15 @@ $request = Request::createFromGlobals();
 $loader = new FilesystemLoader('View', __DIR__ . '/src/Weather');
 $twig = new Environment($loader, ['cache' => __DIR__ . '/cache', 'debug' => true]);
 
-
 $controller = new StartPage();
 $api = new \Weather\Api\GoogleApi();
-switch ("/apiDay") { //$request->getRequestUri()
-    case '/week':
+
+switch ($request->getRequestUri()) {
+    case '/oop-weather/week':
         $renderInfo = $controller->getWeekWeather("old");
-        var_dump($renderInfo);
         break;
-    case '/day':
+    case '/oop-weather/day':
         $renderInfo = $controller->getTodayWeather("old");
-        var_dump($renderInfo);
         break;
     case '/apiWeek':
         #code
@@ -35,15 +33,19 @@ switch ("/apiDay") { //$request->getRequestUri()
         $renderInfo = $daysInfo;
         var_dump($renderInfo);
         break;
-    case '/jsonWeek':
+    case '/oop-weather/index.php/jsonWeek':
         $renderInfo = $controller->getWeekWeather("new");
-      //  var_dump($renderInfo);
+        var_dump($renderInfo);
         break;
-    case '/jsonDay':
+    case '/oop-weather/index.php/jsonDay':
         $renderInfo = $controller->getTodayWeather("new");
         var_dump($renderInfo);
         break;
     default:
+        var_dump($request->getRequestUri());
+        $renderInfo = $controller->getTodayWeather("old");
+        //var_dump($renderInfo);
+        break;
 
 }
 $renderInfo['context']['resources_dir'] = 'src/Weather/Resources';
