@@ -14,7 +14,6 @@ $loader = new FilesystemLoader('View', __DIR__ . '/src/Weather');
 $twig = new Environment($loader, ['cache' => __DIR__ . '/cache', 'debug' => true]);
 
 $controller = new StartPage();
-$api = new \Weather\Api\GoogleApi();
 
 switch ($request->getRequestUri()) {
     case '/oop-weather/week':
@@ -24,7 +23,7 @@ switch ($request->getRequestUri()) {
         $renderInfo = $controller->getTodayWeather("old");
         break;
     case '/oop-weather/apiWeek':
-        #code
+        $renderInfo = $controller->getWeekWeather("api");
         break;
     case '/oop-weather/apiDay':
         $renderInfo = $controller->getTodayWeather("api");

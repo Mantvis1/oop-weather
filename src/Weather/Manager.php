@@ -32,8 +32,16 @@ class Manager
         return $this->getTransporter()->selectByDate($dataType, new \DateTime());
     }
 
+    /**
+     * @param string $dataType
+     * @return array
+     * @throws \Exception
+     */
     public function getWeekInfo(string $dataType): array
     {
+        if($dataType == "api"){
+            return $this->getApi()->getWeek(new \DateTime('+6 days midnight'));
+        }
         return $this->getTransporter()->selectByRange($dataType, new \DateTime('midnight'), new \DateTime('+6 days midnight'));
     }
 
