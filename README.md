@@ -1,18 +1,20 @@
-# oop-example
+Dienos orai:
+/oop-weather/day
 
-Run:
-composer install
+Savatės orai:
+/oop-weather/week
 
-Then you can open index.php
+Dienos orai iš Api:
+/oop-weather/apiDay
 
+Savaitės orai iš Api:
+/oop-weather/apiWeek
 
-**Help:**
-- https://www.php.net/manual/en/language.oop5.php
-- https://twig.symfony.com/doc/2.x/
-  - https://twig.symfony.com/doc/2.x/intro.html
-- https://symfony.com/doc/current/components/http_foundation.html
-  - https://symfony.com/doc/current/components/http_foundation.html#request
-  - https://symfony.com/doc/current/components/http_foundation.html#response
-- https://getcomposer.org/doc/
-  - https://getcomposer.org/download/
-  - https://getcomposer.org/doc/03-cli.md#install-i
+Dienos orai iš Json:
+/oop-weather/jsonDay
+
+Savaitės orai iš Json:
+/oop-weather/jsonWeek
+
+Default reikšmė:
+dienos orai.
