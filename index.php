@@ -27,11 +27,7 @@ switch ($request->getRequestUri()) {
         #code
         break;
     case '/oop-weather/apiDay':
-        var_dump($api->getToday());
-        $daysInfo = array();
-        $daysInfo[0] = $api->getToday();
-        $renderInfo = $daysInfo;
-        var_dump($renderInfo);
+        $renderInfo = $controller->getTodayWeather("api");
         break;
     case '/oop-weather/jsonWeek':
         $renderInfo = $controller->getWeekWeather("new");

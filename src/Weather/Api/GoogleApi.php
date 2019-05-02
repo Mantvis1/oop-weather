@@ -11,7 +11,7 @@ class GoogleApi
      * @return Weather
      * @throws \Exception
      */
-    public function getToday()
+    public function getToday() : Weather
     {
         $today = $this->load(new NullWeather());
         $today->setDate(new \DateTime());
