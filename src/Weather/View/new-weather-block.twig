@@ -1,0 +1,11 @@
+<div class="widget style1 navy-bg">
+    <div class="row">
+        <div class="col-xs-8">
+            <div><span>{{ item.getDate|date("Y-m-d") }}</span>  <span>{{ item.getDay() }}</span> <span>{{ item.text }}</span></div>
+        </div>
+        <div class="col-xs-8 text-center">
+            <div><h2 class="font-bold">High:{{ item.getHigh }}'C</h2>
+            <h2 class="font-bold">Low:{{ item.getLow }}'C</h2></div>
+        </div>
+    </div>
+</div>

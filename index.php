@@ -23,23 +23,23 @@ switch ($request->getRequestUri()) {
     case '/oop-weather/day':
         $renderInfo = $controller->getTodayWeather("old");
         break;
-    case '/apiWeek':
+    case '/oop-weather/apiWeek':
         #code
         break;
-    case '/apiDay':
+    case '/oop-weather/apiDay':
         var_dump($api->getToday());
         $daysInfo = array();
         $daysInfo[0] = $api->getToday();
         $renderInfo = $daysInfo;
         var_dump($renderInfo);
         break;
-    case '/oop-weather/index.php/jsonWeek':
+    case '/oop-weather/jsonWeek':
         $renderInfo = $controller->getWeekWeather("new");
         var_dump($renderInfo);
         break;
-    case '/oop-weather/index.php/jsonDay':
+    case '/oop-weather/jsonDay':
         $renderInfo = $controller->getTodayWeather("new");
-        var_dump($renderInfo);
+        //var_dump($renderInfo);
         break;
     default:
         var_dump($request->getRequestUri());
