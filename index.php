@@ -14,28 +14,29 @@ $loader = new FilesystemLoader('View', __DIR__ . '/src/Weather');
 $twig = new Environment($loader, ['cache' => __DIR__ . '/cache', 'debug' => true]);
 
 $controller = new StartPage();
+$types = ["old","new","api"];
 
 switch ($request->getRequestUri()) {
     case '/oop-weather/week':
-        $renderInfo = $controller->getWeekWeather("old");
+        $renderInfo = $controller->getWeekWeather($types[0]);
         break;
     case '/oop-weather/day':
-        $renderInfo = $controller->getTodayWeather("old");
+        $renderInfo = $controller->getTodayWeather($types[0]);
         break;
     case '/oop-weather/apiWeek':
-        $renderInfo = $controller->getWeekWeather("api");
+        $renderInfo = $controller->getWeekWeather($types[2]);
         break;
     case '/oop-weather/apiDay':
-        $renderInfo = $controller->getTodayWeather("api");
+        $renderInfo = $controller->getTodayWeather($types[2]);
         break;
     case '/oop-weather/jsonWeek':
-        $renderInfo = $controller->getWeekWeather("new");
+        $renderInfo = $controller->getWeekWeather($types[1]);
         break;
     case '/oop-weather/jsonDay':
-        $renderInfo = $controller->getTodayWeather("new");
+        $renderInfo = $controller->getTodayWeather($types[1]);
         break;
     default:
-        $renderInfo = $controller->getTodayWeather("old");
+        $renderInfo = $controller->getTodayWeather($types[0]);
         break;
 
 }
