@@ -26,10 +26,9 @@ class GoogleApi
      */
     private function load(Weather $before)
     {
-        var_dump($before);
         $now = new Weather();
         $base = $before->getDayTemp();
-        $now->setDayTemp(random_int(5 - $base, 5 + $base));
+        $now->setDayTemp(random_int($base - 5, $base + 5));
 
         $base = $before->getNightTemp();
         $now->setNightTemp(random_int(-5 - abs($base), -5 + abs($base)));
@@ -50,7 +49,6 @@ class GoogleApi
             $day->setDate(new \DateTime('+'.$i.' days midnight'));
             $weathers[] = $day;
         }
-        var_dump($weathers);
         return $weathers;
     }
 }
